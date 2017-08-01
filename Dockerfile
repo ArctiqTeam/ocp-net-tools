@@ -12,4 +12,6 @@ ADD sleep.sh .
 
 #ENTRYPOINT ["sh", "sleep.sh"]
 
+EXPOSE 162
+
 CMD ["snmptrapd","-L","o","-f"]
