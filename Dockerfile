@@ -6,7 +6,7 @@ LABEL name="CentOS Base Image" \
     vendor="CentOS" \
     license="GPLv2" \
     build-date="20160906"
-RUN yum install -y net-tools bind-utils telnet nc
+RUN yum install -y net-tools bind-utils telnet nc net-snmp net-snmp-utils
 
 ADD sleep.sh .
 
