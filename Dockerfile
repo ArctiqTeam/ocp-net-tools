@@ -10,6 +10,6 @@ RUN yum install -y net-tools bind-utils telnet nc net-snmp net-snmp-utils
 
 ADD sleep.sh .
 
-ENTRYPOINT ["sh", "sleep.sh"]
+#ENTRYPOINT ["sh", "sleep.sh"]
 
-#CMD ["/bin/bash"]
+CMD ["snmptrapd","-L","o","-f"]
