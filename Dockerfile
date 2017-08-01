@@ -7,6 +7,7 @@ LABEL name="CentOS Base Image" \
     license="GPLv2" \
     build-date="20160906"
 RUN yum install -y net-tools bind-utils telnet nc net-snmp net-snmp-utils
+RUN echo 'disableAuthorization yes' > /etc/snmp/snmptrapd.conf
 
 ADD sleep.sh .
 
