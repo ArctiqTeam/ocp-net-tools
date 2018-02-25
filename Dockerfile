@@ -1,11 +1,9 @@
-FROM scratch
-MAINTAINER https://github.com/CentOS/sig-cloud-instance-images
-ADD centos-7-docker.tar.xz /
+FROM centos:7
+MAINTAINER dev@arctiq.ca
 
-LABEL name="CentOS Base Image" \
-    vendor="CentOS" \
-    license="GPLv2" \
-    build-date="20160906"
+LABEL name="Network Testing Image" \
+    license="GPLv2" 
+    
 RUN yum install -y net-tools bind-utils telnet nc net-snmp net-snmp-utils
 RUN echo 'disableAuthorization yes' > /etc/snmp/snmptrapd.conf
 
